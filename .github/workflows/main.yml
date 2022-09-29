@@ -13,9 +13,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-          cache: npm
-          cache-dependency-path: '**/package-lock.json' # THIS PATTERN did the trick for me.
-      - run: npm install --frozen-lockfile
+      - run: npm install
 
       - name: Build
         run: npm run build
